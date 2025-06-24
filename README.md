@@ -56,12 +56,13 @@ This is a simulation project based on **CoppeliaSim** and **Python**, featuring 
     cd Path-Planning-and-Control-for-CoppeliaSim
     pip install -r requirements.txt
     ```
-3.  **Run a single experiment**: Execute `main.py` with specified arguments. For example:
+3. **Start the simulation:** Open CoppeliaSim and load your scene file (e.g., `scene.ttt`).
+4.  **Run a single experiment**: Execute `main.py` with specified arguments. For example:
     ```bash
     # Run Ackermann model with A* planner and Stanley controller
     python main.py --vehicle_model AckermannSteering --planner AStar --angular Stanley --speed PI
     ```
-4.  **Check the results**: After the experiment, a timestamped folder will be created in the `./report/` directory, containing a `.txt` report and a `.png` performance plot.
+5.  **Check the results**: After the experiment, a timestamped folder will be created in the `./report/` directory, containing a `.txt` report and a `.png` performance plot.
 
 ## 6. Project Structure
 

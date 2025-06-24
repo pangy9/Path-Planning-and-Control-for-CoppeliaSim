@@ -188,7 +188,7 @@ class DifferentialDriveMPCAngularController(AngularController):
         # 每个路径点之间的距离
         path_resolution = self.pixels_to_meters_scale
         for i in range(self.horizon_length + 1):
-            travel += self.dt * abs(target_speed)
+            travel += self.dt * target_speed
             ref_idx = min(int(round(closest_idx + travel / path_resolution)), len(path_m) - 1)
             xref[0, i] = path_m[ref_idx][0]  # x
             xref[1, i] = path_m[ref_idx][1]  # y

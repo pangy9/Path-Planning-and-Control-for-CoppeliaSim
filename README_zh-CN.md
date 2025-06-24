@@ -57,12 +57,13 @@
     cd Path-Planning-and-Control-for-CoppeliaSim
     pip install -r requirements.txt
     ```
-3.  **运行单个实验**: 执行`main.py`并指定参数。例如：
+3.  **启动仿真**: 打开CoppeliaSim软件，并加载你的场景文件 (例如 `scene.ttt`)。
+4.  **运行单个实验**: 执行`main.py`并指定参数。例如：
     ```bash
     # 运行阿克曼模型, A*规划器, Stanley控制器
     python main.py --vehicle_model AckermannSteering --planner AStar --angular Stanley --speed PI
     ```
-4.  **查看结果**: 实验结束后，在`./report/`目录下会生成带时间戳的文件夹，其中包含`.txt`报告和`.png`性能图。
+5.  **查看结果**: 实验结束后，在`./report/`目录下会生成带时间戳的文件夹，其中包含`.txt`报告和`.png`性能图。
 
 ## 6. 项目文件结构
 
