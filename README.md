@@ -36,8 +36,9 @@ This is a simulation project based on **CoppeliaSim** and **Python**, featuring 
 ## 3. Demonstration
 
 ![Performance Summary Example](./assets/AckermannSteering_AStar_MPC_PI.png)
-![Accelerated Demo GIF](./assets/example.gif)
-![Scene Example](./assets/map.png)
+<img src="./assets/example.gif" alt="Accelerated Demo GIF" width="80%">
+<img src="./assets/Ackermann.png" alt="阿克曼小车示例" width="80%">
+<img src="./assets/DifferentialDrive.png" alt="阿克曼小车示例" width="80%">
 
 ## 4. Requirements
 
