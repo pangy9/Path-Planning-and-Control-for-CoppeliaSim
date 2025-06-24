@@ -36,8 +36,8 @@
 
 ![性能总结图示例](./assets/AckermannSteering_AStar_MPC_PI.png)
 <img src="./assets/example.gif" alt="Accelerated Demo GIF" width="80%">
-<img src="./assets/Ackermann.png" alt="阿克曼小车示例" width="80%">
-<img src="./assets/DifferentialDrive.png" alt="阿克曼小车示例" width="80%">
+<img src="./assets/Ackermann.png" alt="阿克曼小车示例" width="40%">
+<img src="./assets/DifferentialDrive.png" alt="阿克曼小车示例" width="40%">
 
 
 ## 4. 环境要求
