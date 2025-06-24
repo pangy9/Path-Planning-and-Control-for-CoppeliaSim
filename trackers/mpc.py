@@ -183,13 +183,22 @@ class DifferentialDriveMPCAngularController(AngularController):
         
         xref = np.zeros((4, self.horizon_length + 1))
         
+        # 计算路径上相邻点之间的实际平均间距（以米为单位）
+        if len(path_m) > 1:
+            path_segments = []
+            for i in range(len(path_m) - 1):
+                segment_length = np.linalg.norm(np.array(path_m[i+1]) - np.array(path_m[i]))
+                path_segments.append(segment_length)
+            actual_path_resolution_m = np.mean(path_segments)
+        else:
+            actual_path_resolution_m = self.pixels_to_meters_scale  # 单点路径的fallback
+        
+        
         # 为预测时域生成参考轨迹
         travel = 0.0
-        # 每个路径点之间的距离
-        path_resolution = self.pixels_to_meters_scale
         for i in range(self.horizon_length + 1):
             travel += self.dt * target_speed
-            ref_idx = min(int(round(closest_idx + travel / path_resolution)), len(path_m) - 1)
+            ref_idx = min(int(round(closest_idx + travel / actual_path_resolution_m)), len(path_m) - 1)
             xref[0, i] = path_m[ref_idx][0]  # x
             xref[1, i] = path_m[ref_idx][1]  # y
             
@@ -200,9 +209,9 @@ class DifferentialDriveMPCAngularController(AngularController):
                 self.prev_yaw = xref[2, i]
             else:
                 xref[2, i] = self._normalize_angle_continuous(target_yaw, xref[2, i-1])
-            
+                
             xref[3, i] = target_speed
-
+        
         return xref
     
     def _calculate_target_yaws(self, path_xy):
