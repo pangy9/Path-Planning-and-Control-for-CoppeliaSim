@@ -310,7 +310,6 @@ class RRTStarPlanner(RRTPlanner):
                 if last_index is not None:
                     node_list.append(goal_node)
                     path = self.generate_final_course(node_list)
-                    path.reverse() # RRT 返回的是从终点到起点的路径
                     print("RRT* 路径规划完成")
                     if self.smooth_path:
                         print("进行平滑处理")
@@ -322,7 +321,6 @@ class RRTStarPlanner(RRTPlanner):
         if last_index is not None:
             node_list.append(goal_node)
             path = self.generate_final_course(node_list)
-            path.reverse() # RRT 返回的是从终点到起点的路径
             print("RRT* 路径规划完成")
             if self.smooth_path:
                 print("进行平滑处理")

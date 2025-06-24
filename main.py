@@ -43,11 +43,11 @@ planners = {
     },
     'RRT': {
         'class': RRTPlanner,
-        'params': {'expand_dis': 5, 'path_resolution': 1, 'goal_sample_rate': 20, 'max_iter': 5000, 'smooth_path': False, 'weight_data': 0.01, 'weight_smooth': 0.9}
+        'params': {'expand_dis': 5, 'path_resolution': 1, 'goal_sample_rate': 20, 'max_iter': 5000, 'smooth_path': True, 'weight_data': 0.01, 'weight_smooth': 0.9}
     },
     'RRTStar': {
         'class': RRTStarPlanner,
-        'params': {'expand_dis': 5, 'path_resolution': 1, 'goal_sample_rate': 20, 'max_iter': 5000, 'smooth_path': False, 'weight_data': 0.01, 'weight_smooth': 0.9, 'connect_circle_dist': 50.0}
+        'params': {'expand_dis': 5, 'path_resolution': 1, 'goal_sample_rate': 20, 'max_iter': 5000, 'smooth_path': True, 'weight_data': 0.01, 'weight_smooth': 0.9, 'connect_circle_dist': 50.0}
     }
 }
 
