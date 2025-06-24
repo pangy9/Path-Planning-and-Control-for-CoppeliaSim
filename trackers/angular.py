@@ -156,7 +156,6 @@ class StanleyAngularController(AngularController):
         
         # 4. 计算Stanley控制律，得到目标前轮转角 delta
         crosstrack_term = math.atan2(self.k_gain * error_front_axle_m, speed)
-        print(f"当前航向角: {current_orientation:.2f}, 目标航向角: {target_yaw:.2f}, 横向误差(米): {error_front_axle_m:.2f}, 横向控制项: {crosstrack_term:.2f}")
         
         delta = heading_error + crosstrack_term
         
