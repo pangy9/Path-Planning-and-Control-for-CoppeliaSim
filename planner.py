@@ -32,8 +32,8 @@ class AStarPlanner(PathPlanner):
         self.G = None # 从起点A移动到指定方格的移动代价
         self.H = None # 从指定的方格移动到终点B的估算成本
         self.F = None # 总代价函数
-        self.openset = set() # 开放列表
-        self.openset = [] # 关闭列表
+        self.closeset = set()
+        self.openset = []
         self.openset_mirror = set() # 用于快速查找节点是否在开放列表中
         self.cameFrom = dict() # 记录路径父节点，从终点到起点
         self.costmap = None # world cost map: obstacle = Inf
