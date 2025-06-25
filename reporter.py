@@ -1,4 +1,19 @@
 """
+Original Author: Long Cheng
+Date: 2024-05-11 15:30:19
+LastEditors: Long Cheng
+LastEditTime: 2024-06-07 16:25:18
+Description: 
+
+Copyright (c) 2024 by longcheng.work@outlook.com, All Rights Reserved.
+
+Modified by: Yun Pang
+Modifications: Add new functions, like plot_summary_results..., and modified __init__, estimate_robot_sim_energy() functions.
+Used with permission from original author / Educational use only
+"""
+
+"""
+
 坐标系统一使用数学坐标系
 坐标系原点在图像左下角，y轴向上，x轴向右
 """
