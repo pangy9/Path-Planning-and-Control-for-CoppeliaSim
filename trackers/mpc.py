@@ -9,8 +9,8 @@ plt.rcParams['axes.unicode_minus'] = False
 from utils import smooth_path_yaw, angle_mod
 from .angular import AngularController
 
-class DifferentialDriveMPCAngularController(AngularController):
-    """两轮差分MPC跟踪器（带可视化）"""
+class MPCAngularController(AngularController):
+
     def __init__(
         self,
         pixels_to_meters_scale,

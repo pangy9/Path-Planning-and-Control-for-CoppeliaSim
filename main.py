@@ -56,11 +56,11 @@ controllers = {
         'PurePursuit': {'class': PurePursuitAngularController, 'params': {'lookahead_distance': 30}},
         'Stanley': {'class': StanleyAngularController, 'params': {'WB': 0.25, 'k_gain': 5}},
         'MPC': {
-            'class': DifferentialDriveMPCAngularController,
+            'class': MPCAngularController,
             'params': {'state_weight': np.diag([2, 2, 0.25, 0]), 'control_weight': np.diag([0, 0.005]), 'terminal_weight': np.diag([4, 4, 1, 0]), 'control_change_weight': np.diag([0, 0.01]), 'horizon_length': 10, 'dt': sim_step, 'control_speed': False}
         },
         'MPC_Speed': {
-            'class': DifferentialDriveMPCAngularController,
+            'class': MPCAngularController,
             'params': {'state_weight': np.diag([2, 2, 0.6, 0.25]), 'control_weight': np.diag([0.1, 0.015]), 'terminal_weight': np.diag([4, 4, 1, 1]), 'control_change_weight': np.diag([0.01, 0.05]), 'control_speed': True, 'MAX_ACCELERATION': 5, 'horizon_length': 10, 'dt': sim_step, 'MAX_V': 1.3, 'MAX_OMEGA': 3.0}
         },
         'PI': {'class': PISpeedController, 'params': {'kp': 5, 'ki': 0.1, 'n': 5, 'max_acc': 5, 'min_acc': -5}}
@@ -69,11 +69,11 @@ controllers = {
         'PurePursuit': {'class': PurePursuitAngularController, 'params': {'lookahead_distance': 30}},
         'Stanley': {'class': StanleyAngularController, 'params': {'k_gain': 5}},
         'MPC': {
-            'class': DifferentialDriveMPCAngularController,
+            'class': MPCAngularController,
             'params': {'state_weight': np.diag([2, 2, 0.25, 0]), 'control_weight': np.diag([0, 0.005]), 'terminal_weight': np.diag([4, 4, 1, 0]), 'control_change_weight': np.diag([0, 0.01]), 'horizon_length': 10, 'dt': sim_step, 'control_speed': False}
         },
         'MPC_Speed': {
-            'class': DifferentialDriveMPCAngularController,
+            'class': MPCAngularController,
             'params': {'state_weight': np.diag([2, 2, 0.5, 0.5]), 'control_weight': np.diag([0.005, 0.005]), 'terminal_weight': np.diag([4, 4, 1, 1]), 'control_change_weight': np.diag([0.01, 0.01]), 'control_speed': True, 'MAX_ACCELERATION': 5, 'horizon_length': 10, 'dt': sim_step, 'MAX_V': 1.5}
         },
         'PI': {'class': PISpeedController, 'params': {'kp': 3, 'ki': 0.05, 'n': 5, 'max_acc': 3, 'min_acc': -3}}

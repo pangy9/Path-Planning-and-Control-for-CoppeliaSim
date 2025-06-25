@@ -1,6 +1,6 @@
 from .angular import PurePursuitAngularController, StanleyAngularController
 from .speed import PISpeedController, ConstantSpeedController
-from .mpc import DifferentialDriveMPCAngularController
+from .mpc import MPCAngularController
 from .tracker_base import PathTracker, MotionCommand
 
 __all__ = [
@@ -8,6 +8,6 @@ __all__ = [
     "StanleyAngularController",
     "PISpeedController",
     "ConstantSpeedController",
-    "DifferentialDriveMPCAngularController",
+    "MPCAngularController",
     "PathTracker",
 ]
