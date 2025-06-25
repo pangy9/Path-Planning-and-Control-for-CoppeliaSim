@@ -87,3 +87,7 @@ code/
 │
 └── sim.py, simConst.py, remoteApi.dll  # CoppeliaSim 远程API相关文件(Windows平台)
 ```
+
+## 致谢
+
+- **[PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)**: 感谢 Atsushi Sakai 及其团队提供的优秀机器人算法实现，这些代码是我学习路径规划和控制算法的重要参考资料。

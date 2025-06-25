@@ -86,3 +86,6 @@ code/
 │
 └── sim.py, simConst.py, remoteApi.dll  # CoppeliaSim Remote API files (for Windows)
 ```
+
+## Acknowledgements
+- **[PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)**:  Thanks to Atsushi Sakai and his team for providing excellent implementations of robotics algorithms.  Their code served as an invaluable resource in my learning of path planning and control algorithms.
